@@ -9,7 +9,7 @@ const parrafo = document.getElementById("warnings");
 //Funciones.
 
 function mensaje() {
-alert("Recuerda completar todos los campos requeridos para continuar");
+warnings += 'Recuerda completar todos los campos requeridos para continuar';
 }
 
 //Validación del formulario.
@@ -47,28 +47,28 @@ formulario.addEventListener("submit", (e) => {
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     let warnings = ""
-    let ingresar = false
+    let ingresar = true
     parrafo.innerHTML = ""
 
     while (ingresar === true) {
 
     if (nombre.value.length < 3) {
-        warnings += 'El Nombre debe tener más de 3 caracteres <br>';
+        warnings += '*El Nombre debe tener más de 3 caracteres*';
         mensaje()
     }
 
     else if (apellido.value.length < 3) {
-        warnings += 'El Apellido debe tener más de 3 caracteres <br>';
+        warnings += '*El Apellido debe tener más de 3 caracteres*';
         mensaje()
     }
 
     else if (usuario.value.length < 4) {
-        warnings += 'El Nombre de Usuario debe tener más de 4 caracteres <br>';
+        warnings += '*El Nombre de Usuario debe tener más de 4 caracteres*';
         mensaje()
     }
 
     else if (contraseña.value.length < 6) {
-        warnings += 'La Contraseña debe tener más de 6 caracteres <br>';  
+        warnings += '*La Contraseña debe tener más de 6 caracteres*';  
         mensaje()      
     }
     
