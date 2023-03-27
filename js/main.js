@@ -75,11 +75,11 @@ formulario.addEventListener("submit", (e) => {
     if(ingresar) {
         parrafo.innerHTML = warnings;
     }
-
+    
     else {
         parrafo.innerHTML = "Registro exitoso";
     }
-
+    
     break;
     }
 })
